@@ -1,0 +1,77 @@
+#div1 {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    border: 1px solid black;
+    animation-name: pulse;
+    animation-duration: 2s;
+    /* infinite time repeat of animation used 3 aslo then repeat 3 times  */
+    animation-iteration-count: infinite;
+    /* animation from 0% to 100% and again 100% to 0% */
+    animation-direction: alternate;
+}
+
+#div2 {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    border: 1px solid black;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation 100% to 0% and again 100% to 0% */
+    animation-direction: reverse;
+    /* start slowly and go faster  */
+    animation-timing-function: ease-in;
+}
+
+#div3 {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    border: 1px solid black;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    /* animation is over then it stayed last stage of animation */
+    animation-fill-mode: forwards;
+
+}
+
+#div4 {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    border: 1px solid black;
+    animation-name: pulse;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation is over then it stayed last stage of animation */
+    animation-fill-mode: forwards;
+}
+
+#div5 {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    border: 1px solid black;
+    /* short hand property  */
+    animation: pulse 5s ease-in infinite forwards;
+}
+
+div:hover {
+    /* when hover element it paused */
+    animation-play-state: paused;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: lightblue;
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        background-color: lightcoral;
+        transform: rotateZ(180deg);
+    }
+}
